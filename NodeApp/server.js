@@ -1,8 +1,11 @@
 const express = require('express');
 const app = express();
+const path = require('path');
+const htmlFilePath = path.join(__dirname, 'index.html');
+
 
 app.get('/', (req, res) => {
-    res.send('<h1>Name: Abdullatif Alowayyid</h1> <h2>ID: 201850280 </h2>');
+    res.sendFile(htmlFilePath);
     }
 );
 
